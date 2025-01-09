@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Webtech</title>
+</head>
+<body>
+
+   <header>
+       <div class="logo">
+           <img src="assets/images/logo.png"   width="60px" height="60px"  alt="logo">
+           <h1>GreenTech</h1>
+       </div>
+       <nav class="nav1">
+           <ul>
+               <li><a href="#home">Accueil</a></li>
+               <li><a href="services.html">Services</a></li>
+               <li><a href="apropos.html">Apropos</a></li>
+               <li><a href="faq.html">FAQ</a></li>
+               <li><a href="contact.html">Contactez-nous</a></li>
+               <li><a href="team.html">Team</a></li>
+           </ul>
+       </nav>
+   </header>
+
+
+    <div class="hero">
+
+        <div>
+            <h1 id="hero-title" style="font-size: 60px;">hello</h1>
+        </div>
+
+            <div>
+                <p>Découvrez comment nos solutions technologiques respectueuse de l’envirenement peut traansformer votre 
+                    avenir.</p>
+                
+            </div class="btn_hero">
+
+            <div class="btn">
+                <a href="services.html" > Decouvrez nos solutions</a>
+            </div>
+            
+          
+
+
+
+
+            <div>
+                <button type="button"></button>
+            </div>
+
+    </div>
+
+   <div class="services">
+
+    <h1>Services</h1>
+   </div>
+
+   <div class="services-container">
+
+     <div>
+         <img src="/assets/images/img1.jpg" >
+         <p><a href="services.html">Consultation en Technologie verte</a> </p>
+     </div>
+
+     <div>
+         <img src="/assets/images/img4.jpg"  >
+         <p><a href="services.html">Solutions d’energie renouvelables</a> </p>
+     </div>
+
+     <div>
+         <img src="/assets/images/img3.jpg" >
+         <p><a href="services.html">Accompagnement
+            écoresponsable</a> </p>
+     </div>
+   </div>
+
+
+
+   <div class="contact">
+
+    <h1>Contact</h1>
+
+    <p>Vous avez une question ? Besoin de  plus d’information,nous sommes là pour vous aider.</p>
+
+  
+
+    <div class="btn-div">
+   <a class="btn" href="contact.html"> Contactez-nous</a>
+    </div>
+
+
+   </div>
+
+   <footer>
+
+    <div  class="footer-container">
+    
+        <img src="assets/images/logo.png" width="" alt="logo">
+        <p>Technologies innovantes pour un futur respectueux de l’environnement.</p>
+
+    </div>
+
+    <div>
+<ul>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="Apropos.html">Apropos</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+</ul>
+    </div>
+
+    <ul>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#privacy-policy">Privacy-Policy</a></li>
+    </ul>
+    <div> 
+        <ul>
+            <li><a href="apropos.html">Twitter</a></li>
+            <li><a href="services.html">Instagram</a></li>
+            <li><a href="faq.html">Facebook</a></li>
+        </ul>
+    </div>
+    <div>
+        <ul>       
+            <li><a href="#">greenTech@appx.com</a></li>
+            <li><a href="#">06782233999</a></li>         
+        </ul>
+    </div>
+     
+   </footer>
+   <div class="copyright">
+ <p>Copyright @ 2025. All Rights Reserved.</p>
+   </div>
+  
+</body>
+
+
+<script>
+
+   
+    const text = "Innover pour un avenir durable";  
+    let index = 0; 
+    const heroTitle = document.getElementById("hero-title");
+
+    function typeText() {
+        if (index < text.length) {
+            heroTitle.innerHTML += text.charAt(index);
+            index++;
+            setTimeout(typeText, 100);  
+        } else {
+
+            setTimeout(() => {
+                index = 0;  
+                heroTitle.innerHTML = '';  
+                typeText();  
+            }, 1000);  
+        }
+    }
+
+  
+    window.onload = function() {
+        typeText();
+    };
+</script>
+</html>
