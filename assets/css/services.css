@@ -1,0 +1,98 @@
+.cards{
+   
+    display: flex;
+    justify-content: space-around;
+
+}
+.card{
+    width: 18rem;
+    background-color: rgb(101, 23, 23);
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(142, 15, 15, 0.1); 
+    padding: 20px;
+    max-width: 300px;
+    text-align: center;
+}
+section{
+    margin-top: 35px;
+}
+.training-engineering {
+    padding: 50px 20px;
+}
+
+.container {
+
+    align-items: center;
+    gap: 20px;
+}
+.containers {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.image img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.content {
+    max-width: 600px;
+}
+
+.content h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.content p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.content h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.content ul li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+}
+
+.content ul li::before {
+    content: "✔";
+    color: #fbb034;
+    position: absolute;
+    left: 0;
+}
+
+.advantage {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.advantage p {
+    margin-bottom: 20px;
+    font-size: 1.1em;
+}
+
+.advantage button {
+    background-color: #13de90;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.advantage button:hover {
+    background-color: #0056b3;
+}
