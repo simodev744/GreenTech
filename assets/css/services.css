@@ -92,7 +92,10 @@ section{
     border-radius: 5px;
     cursor: pointer;
 }
-
-.advantage button:hover {
-    background-color: #0056b3;
+.advantage button a{
+    text-decoration: none;
+    color: azure;
+}
+.advantage button a:hover {
+    color: black;
 }
