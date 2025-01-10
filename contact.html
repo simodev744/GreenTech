@@ -26,39 +26,39 @@
         </nav>
     </header>
     
-    <section class="contact">
-        <div class="Contact-nous">
-            <h1>Contactez-nous</h1>
-            <div class="contact-wrapper">
-                <div class="contact-form">
-                    <h3>Envoyez-nous un message</h3>
-                    <form>
-                        <div class="form-grp">
-                            <input type="text" name="Nome" placeholder="Ton Nome" required>
-                        </div>
-                        <div class="form-grp">
-                            <input type="email" name="email" placeholder="Votre email" required>
-                        </div>
-                        <div class="form-grp">
-                           <textarea name="message"cols="40" rows="8" class="form-control" placeholder="Votre message" ></textarea>
-                        </div>
-                        <button type="submit">Envoyez un message</button>
-                    </form>
-                </div>
+        <section class="contact">
+            <div class="Contact-nous">
+                <h1>Contactez-nous</h1>
+                <div class="contact-wrapper">
+                    <div class="contact-form">
+                        <h3>Envoyez-nous un message</h3>
+                        <form id="contactform">
+                            <div class="form-grp">
+                                <input type="text" name="Nome" placeholder="Ton Nome" required>
+                            </div>
+                            <div class="form-grp">
+                                <input type="email" name="email" placeholder="Votre email" required>
+                            </div>
+                            <div class="form-grp">
+                            <textarea name="message"cols="40" rows="8" class="form-control" placeholder="Votre message" ></textarea>
+                            </div>
+                            <button type="submit">Envoyez un message</button>
+                        </form>
+                    </div>
 
-            <div class="contact-info">
-                <h3>Contacte Information</h3>
-                <div class="contacte-info-p">
-                    <p><i class="fas fa-phone"></i>+212-5360-5244</p>
-                    
-                    <p><i class="fas fa-envelope"></i>greentech@appx.com</p>
-                    
-                    <p><i class="fas fa-map-marker-alt"></i>294 Forosia,Beni Mellal,Morocco</p>
+                <div class="contact-info">
+                    <h3>Contacte Information</h3>
+                    <div class="contacte-info-p">
+                        <p><i class="fas fa-phone"></i>+212-5360-5244</p>
+                        
+                        <p><i class="fas fa-envelope"></i>greentech@appx.com</p>
+                        
+                        <p><i class="fas fa-map-marker-alt"></i>294 Forosia,Beni Mellal,Morocco</p>
+                    </div>
+                </div>
                 </div>
             </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
     <footer>
         <div  class="footer-container">
@@ -96,4 +96,53 @@
         </div>
        </footer>
 </body>
+
+<script>
+   
+    document.getElementById('contactform').addEventListener('submit', function(e) {
+        e.preventDefault();
+        var nom = document.querySelector('input[name="Nome"]').value.trim();
+        var email = document.querySelector('input[name="email"]').value.trim();
+        var message = document.querySelector('textarea[name="message"]').value.trim();
+
+
+        if (nom === '') {
+            alert('Le champ Nom est obligatoire.');
+            return;
+        }
+        if (email === ''  ) {
+            alert('Le champ Email est obligatoire.');
+            return;
+        }
+
+    
+        var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (!emailRegex.test(email)) {
+            alert('Veuillez entrer un email valide.');
+            return; 
+        }
+
+        if (message === '' ) {
+            alert('Le champ Message est obligatoire.');
+            return; 
+        }
+
+        if (nom.length < 3) {
+                alert('Le nom doit contenir au moins 3 caractères.');
+                return; 
+            }
+
+
+        if (message.length < 20) {
+                alert('Le message doit contenir au minimum 20 caractères.');
+                return; 
+            }
+
+
+       
+        alert('Votre message a été envoyé avec succès !');
+
+    });
+</script>
+
 </html>
