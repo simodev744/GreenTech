@@ -193,8 +193,8 @@ ul{
   }
   
   .contact-button {
-    background-color: #4caf50;
-    color: #000000;
+    background-color:  #2DCC70;
+    color: #f8f8f8;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -204,10 +204,11 @@ ul{
   }
   .contact-button a{
     text-decoration: none;
-    color: #000;
+    color: #fbf9f9;
   }
-  .contact-button:hover {
-    background-color: #45a049;
+  .contact-button a:hover {
+    
+    color: #000;
   }
   
   /* Toggle FAQ answer display */

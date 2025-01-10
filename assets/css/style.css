@@ -172,8 +172,11 @@ ul{
 
  .btn-div{
     margin-bottom: 20px;
+    border-radius: 5px;
  }
- 
+ .btn-div a:hover{
+   color: rgb(0, 0, 0);
+ }
  footer{
     display: flex;
     padding-top: 10px;
