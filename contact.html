@@ -31,7 +31,7 @@
             <div class="contact-wrapper">
                 <div class="contact-form">
                     <h3>Envoyez-nous un message</h3>
-                    <form>
+                    <form id="contactform">
                         <div class="form-grp">
                             <input type="text" name="Nome" placeholder="Ton Nome" required>
                         </div>
@@ -45,7 +45,7 @@
                     </form>
                 </div>
             <div class="contact-info">
-                <h3>Contacte Information</h3>
+                <h3>Contact Information</h3>
                 <div class="contacte-info-p">
                     <p><i class="fas fa-phone"></i>+212-5360-5244</p>
                     
@@ -93,4 +93,44 @@
         </div>
        </footer>
 </body>
+
+
+    <script>
+   
+   document.getElementById('contactform').addEventListener('submit', function(e) {
+       e.preventDefault();
+       var nom = document.querySelector('input[name="Nome"]').value.trim();
+       var email = document.querySelector('input[name="email"]').value.trim();
+       var message = document.querySelector('textarea[name="message"]').value.trim();
+       if (nom === '') {
+           alert('Le champ Nom est obligatoire.');
+           return;
+       }
+       if (email === ''  ) {
+           alert('Le champ Email est obligatoire.');
+           return;
+       }
+   
+       var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+       if (!emailRegex.test(email)) {
+           alert('Veuillez entrer un email valide.');
+           return; 
+       }
+       if (message === '' ) {
+           alert('Le champ Message est obligatoire.');
+           return; 
+       }
+       if (nom.length < 3) {
+               alert('Le nom doit contenir au moins 3 caractères.');
+               return; 
+           }
+       if (message.length < 20) {
+               alert('Le message doit contenir au minimum 20 caractères.');
+               return; 
+           }
+      
+       alert('Votre message a été envoyé avec succès !');
+   });
+</script>
+
 </html>
